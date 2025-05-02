@@ -1,4 +1,5 @@
 .idx/
+.firebaserc
 .vscode/
 node_modules/
 playground/.idea/
