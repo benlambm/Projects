@@ -7,15 +7,96 @@
     <link rel="stylesheet" href="style.css" />
     <script defer src="nav.js"></script>
     <script defer src="dom.js"></script>
+    <style>
+      /* Add a class for styling the example element */
+      .dom-element-example {
+        padding: 10px;
+        margin: 10px 0;
+        border: 1px solid #ccc;
+        background-color: #f9f9f9;
+      }
+    </style>
   </head>
   <body>
     <header id="nav"></header>
     <main>
-      <h1>DOM</h1>
-      <p id="domText">This text will change when you click the button.</p>
+      <h1>DOM (Document Object Model)</h1>
+      <p>
+        The DOM is a programming interface for web documents. It represents the page so that programs can change the document structure, style, and content. JavaScript interacts with the DOM to make web pages dynamic.
+      </p>
 
-      <button id="domBtn">Change Text ✏️</button>
-      <div class="output" id="domOutput"></div>
+      <h2>Example 1: Selecting Elements</h2>
+      <p>
+        You can select HTML elements in your page using methods like <code>getElementById()</code> (by ID), <code>querySelector()</code> (by CSS selector, selects the first match), and <code>querySelectorAll()</code> (by CSS selector, selects all matches).
+      </p>
+      <div id="elementToSelect" class="dom-element-example">This is an element with an ID and a class.</div>
+      <div>
+        <label for="selectorInput">Enter a CSS selector (e.g., #elementToSelect, .dom-element-example, p):</label>
+        <input type="text" id="selectorInput" value="#elementToSelect">
+        <button id="selectElementBtn">Select Element(s)</button>
+      </div>
+      <div class="output" id="selectElementOutput"></div>
+
+      <h2>Example 2: Modifying Element Content</h2>
+      <p>
+        Change the text inside an element using <code>textContent</code> or <code>innerHTML</code>. <code>innerHTML</code> allows you to include HTML tags.
+      </p>
+      <p id="contentToModify" class="dom-element-example">Original text content.</p>
+      <div>
+        <label for="newContentInput">Enter new content:</label>
+        <input type="text" id="newContentInput" value="New text content!">
+        <button id="changeTextBtn">Change textContent</button>
+      </div>
+       <p id="htmlContentToModify" class="dom-element-example">Original <strong>HTML</strong> content.</p>
+       <div>
+         <label for="newHtmlContentInput">Enter new HTML content:</label>
+         <input type="text" id="newHtmlContentInput" value="New <em>HTML</em> content!">
+         <button id="changeHtmlBtn">Change innerHTML</button>
+       </div>
+       <div class="output" id="modifyContentOutput"></div>
+
+      <h2>Example 3: Changing Element Styles</h2>
+      <p>
+        Modify the visual appearance of an element by accessing its <code>style</code> property.
+      </p>
+      <div id="styleToModify" class="dom-element-example" style="color: blue;">This element's style will change.</div>
+      <div>
+        <label for="stylePropertyInput">Enter CSS property (e.g., color):</label>
+        <input type="text" id="stylePropertyInput" value="color">
+      </div>
+      <div>
+        <label for="styleValueInput">Enter new value (e.g., red):</label>
+        <input type="text" id="styleValueInput" value="red">
+      </div>
+      <button id="changeStyleBtn">Change Style</button>
+      <div class="output" id="changeStyleOutput"></div>
+
+      <h2>Example 4: Creating and Appending Elements</h2>
+      <p>
+        Create new HTML elements using <code>document.createElement()</code> and add them to the page using methods like <code>appendChild()</code>.
+      </p>
+      <div id="parentElementForAppend" class="dom-element-example"><strong>Parent Element:</strong> New elements will be added below:</div>
+       <div>
+        <label for="elementTypeInput">Element type (e.g., p, div, span):</label>
+        <input type="text" id="elementTypeInput" value="p">
+      </div>
+      <div>
+        <label for="elementTextInput">Element text:</label>
+        <input type="text" id="elementTextInput" value="Newly created element.">
+      </div>
+      <button id="createElementBtn">Create and Append Element</button>
+      <div class="output" id="createElementOutput"></div>
+
+       <h2>Example 5: Removing Elements</h2>
+       <p>
+         Remove an element from the DOM using the <code>removeChild()</code> method on its parent node, or by calling <code>remove()</code> on the element itself.
+       </p>
+       <div id="elementToRemoveContainer" class="dom-element-example"><strong>Container:</strong> The element below can be removed.
+         <p id="elementToRemove" style="color: brown;">This element will be removed.</p>
+       </div>
+       <button id="removeElementBtn">Remove the brown paragraph</button>
+       <div class="output" id="removeElementOutput"></div>
+
     </main>
   </body>
 </html>

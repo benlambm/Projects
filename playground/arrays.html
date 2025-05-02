@@ -13,12 +13,58 @@
     <main>
       <h1>Arrays</h1>
       <p>
-        Arrays store lists of values. Methods like <span class="code-inline">map</span> and <span class="code-inline">filter</span> help us transform them.
+        Arrays are ordered lists of values. They are fundamental data structures in JavaScript, allowing you to store and manage collections of data.
       </p>
 
-      <input id="arrayInput" type="text" placeholder="Enter numbers separated by commas" />
-      <button id="arrayBtn">Double numbers 🔁</button>
+      <h2>Example 1: Creating and Accessing Elements</h2>
+      <p>
+        Arrays are created using square brackets <code>[]</code>. You can access individual elements using their index, starting from 0 for the first element.
+      </p>
+      <div>
+        <label for="arrayAccessInput">Enter an index (0-based):</label>
+        <input type="number" id="arrayAccessInput" value="0">
+        <button id="arrayAccessBtn">Get Element</button>
+      </div>
+      <div class="output" id="arrayAccessOutput"></div>
+      <div class="output" id="currentArrayDisplay"></div>
+
+      <h2>Example 2: Adding Elements (`push`, `unshift`)</h2>
+      <p>
+        Use the <code>push()</code> method to add an element to the end of an array, and <code>unshift()</code> to add an element to the beginning.
+      </p>
+      <div>
+        <label for="addElementInput">Enter value to add:</label>
+        <input type="text" id="addElementInput">
+        <button id="pushBtn">Add to End (push)</button>
+        <button id="unshiftBtn">Add to Beginning (unshift)</button>
+      </div>
+      <div class="output" id="addElementOutput"></div>
+
+      <h2>Example 3: Removing Elements (`pop`, `shift`)</h2>
+      <p>
+        Use the <code>pop()</code> method to remove the last element from an array, and <code>shift()</code> to remove the first element.
+      </p>
+      <div>
+        <button id="popBtn">Remove from End (pop)</button>
+        <button id="shiftBtn">Remove from Beginning (shift)</button>
+      </div>
+      <div class="output" id="removeElementOutput"></div>
+
+       <h2>Example 4: Iterating Through an Array (for loop)</h2>
+       <p>
+         You can loop through array elements using a <code>for</code> loop and the array's <code>length</code> property.
+       </p>
+        <button id="iterateArrayBtn">Iterate and Display</button>
+        <div class="output" id="iterateArrayOutput"></div>
+
+      <h2>Example 5: Transforming Arrays (`map`, `filter`)</h2>
+      <p>
+        Higher-order functions like <code>map()</code> and <code>filter()</code> are powerful ways to create new arrays based on existing ones. This example doubles each number in an array.
+      </p>
+      <input id="arrayInput" type="text" placeholder="Enter numbers separated by commas" value="1, 2, 3, 4, 5"/>
+      <button id="arrayBtn">Double numbers (map)</button>
       <div class="output" id="arrayOutput"></div>
+
     </main>
   </body>
 </html>

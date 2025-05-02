@@ -13,13 +13,33 @@
     <main>
       <h1>Conditionals</h1>
       <p>
-        Conditionals let your code make decisions. Is a number even or odd?
-        Find out!
+        Conditionals allow your code to make decisions and execute different blocks of code based on whether a condition is true or false. This is fundamental for controlling the flow of your program.
       </p>
 
-      <input id="condInput" type="number" placeholder="Enter an integer" />
-      <button id="condBtn">Check ➡️</button>
-      <div class="output" id="condOutput"></div>
+      <h2>Example 1: Even or Odd Check (`if/else`)</h2>
+      <p>
+        This example uses a simple <code>if</code> and <code>else</code> statement to check if a number is even or odd based on the remainder when divided by 2.
+      </p>
+      <input id="evenOddInput" type="number" placeholder="Enter an integer" />
+      <button id="evenOddBtn">Check Even/Odd</button>
+      <div class="output" id="evenOddOutput"></div>
+
+      <h2>Example 2: Positive, Negative, or Zero (`if/else if/else`)</h2>
+      <p>
+        This example demonstrates using <code>if</code>, <code>else if</code>, and <code>else</code> to check for multiple possible conditions.
+      </p>
+      <input id="posNegZeroInput" type="number" placeholder="Enter a number" />
+      <button id="posNegZeroBtn">Check Sign</button>
+      <div class="output" id="posNegZeroOutput"></div>
+
+      <h2>Example 3: Checking a Range (Logical Operators `&&`, `||`)</h2>
+      <p>
+        Logical operators like <code>&&</code> (AND) and <code>||</code> (OR) allow you to combine multiple conditions. This example checks if a number is between 10 and 20 (inclusive) using the AND operator.
+      </p>
+       <input id="rangeInput" type="number" placeholder="Enter a number" />
+       <button id="rangeBtn">Check Range (10-20)</button>
+       <div class="output" id="rangeOutput"></div>
+
     </main>
   </body>
 </html>

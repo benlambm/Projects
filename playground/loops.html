@@ -13,13 +13,25 @@
     <main>
       <h1>Loops</h1>
       <p>
-        Loops let us repeat work quickly. Click below to generate a multiplication
-        table using a <span class="code-inline">for</span> loop.
+        Loops are used to repeat a block of code multiple times. They are essential for tasks that involve iteration, like processing lists of data or performing actions a set number of times.
       </p>
 
-      <input id="loopInput" type="number" placeholder="Enter a number (1–12)" />
-      <button id="loopBtn">Make table 📊</button>
-      <div class="output" id="loopOutput"></div>
+      <h2>Example 1: For Loop (Multiplication Table)</h2>
+      <p>
+        The <code>for</code> loop is often used when you know in advance how many times you want the loop to run. This example generates a multiplication table for the number you enter.
+      </p>
+      <input id="forLoopInput" type="number" placeholder="Enter a number (1–12)" />
+      <button id="forLoopBtn">Make Table</button>
+      <div class="output" id="forLoopOutput"></div>
+
+      <h2>Example 2: While Loop (Counting Up)</h2>
+      <p>
+        The <code>while</code> loop is used when you don't know exactly how many times the loop will run, but you want it to continue as long as a specific condition is true. This example counts up from 1 to the number you enter.
+      </p>
+      <input id="whileLoopInput" type="number" placeholder="Enter a number" />
+      <button id="whileLoopBtn">Count Up</button>
+      <div class="output" id="whileLoopOutput"></div>
+
     </main>
   </body>
 </html>

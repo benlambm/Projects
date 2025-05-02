@@ -13,13 +13,86 @@
     <main>
       <h1>Objects</h1>
       <p>
-        Objects are collections of key-value pairs. They let us group related data.
+        Objects in JavaScript are collections of key-value pairs, where keys are strings (or Symbols) and values can be any data type, including other objects or functions. They are used to represent entities and group related data and functionality.
       </p>
 
-      <input id="objNameInput" type="text" placeholder="Enter a name" />
-      <input id="objAgeInput" type="number" placeholder="Enter an age" />
-      <button id="objBtn">Create Person 👤</button>
-      <div class="output" id="objOutput"></div>
+      <div class="output" id="currentObjectDisplay"></div>
+
+      <h2>Example 1: Creating and Displaying an Object</h2>
+      <p>
+        Objects can be created using curly braces <code>{}</code>. Properties are defined as <code>key: value</code> pairs.
+        Enter a name and age to create a simple person object.
+      </p>
+      <div>
+        <label for="createObjNameInput">Name:</label>
+        <input type="text" id="createObjNameInput" value="Alice" />
+      </div>
+      <div>
+        <label for="createObjAgeInput">Age:</label>
+        <input type="number" id="createObjAgeInput" value="30" />
+      </div>
+      <button id="createObjBtn">Create/Update Object</button>
+      <div class="output" id="createObjOutput"></div>
+
+      <h2>Example 2: Accessing Properties</h2>
+      <p>
+        You can access object properties using dot notation (<code>object.property</code>) or bracket notation (<code>object['property']</code>). Bracket notation is useful for keys with spaces or special characters, or when the key is stored in a variable.
+      </p>
+      <div>
+        <label for="accessKeyInput">Enter property key:</label>
+        <input type="text" id="accessKeyInput" value="name">
+        <button id="accessPropertyBtn">Access Property</button>
+      </div>
+      <div class="output" id="accessPropertyOutput"></div>
+
+      <h2>Example 3: Modifying Properties</h2>
+      <p>
+        You can change the value of an existing property by assigning a new value to it using either dot or bracket notation.
+      </p>
+       <div>
+        <label for="modifyKeyInput">Enter key to modify:</label>
+        <input type="text" id="modifyKeyInput" value="age">
+      </div>
+      <div>
+        <label for="modifyValueInput">Enter new value:</label>
+        <input type="text" id="modifyValueInput" value="31">
+      </div>
+      <button id="modifyPropertyBtn">Modify Property</button>
+       <div class="output" id="modifyPropertyOutput"></div>
+
+      <h2>Example 4: Adding New Properties</h2>
+      <p>
+        You can add a new property to an object by assigning a value to a new key using dot or bracket notation.
+      </p>
+       <div>
+        <label for="addKeyInput">Enter new key:</label>
+        <input type="text" id="addKeyInput" value="city">
+      </div>
+      <div>
+        <label for="addValueInput">Enter new value:</label>
+        <input type="text" id="addValueInput" value="New York">
+      </div>
+      <button id="addPropertyBtn">Add Property</button>
+       <div class="output" id="addPropertyOutput"></div>
+
+      <h2>Example 5: Deleting Properties</h2>
+      <p>
+        You can remove a property from an object using the <code>delete</code> keyword.
+      </p>
+      <div>
+        <label for="deleteKeyInput">Enter key to delete:</label>
+        <input type="text" id="deleteKeyInput" value="city">
+        <button id="deletePropertyBtn">Delete Property</button>
+      </div>
+       <div class="output" id="deletePropertyOutput"></div>
+
+       <h2>Example 6: Iterating Through Properties</h2>
+       <p>
+         You can loop through the keys (and thus the values) of an object using a <code>for...in</code> loop or methods like <code>Object.keys()</code>, <code>Object.values()</code>, or <code>Object.entries()</code>.
+       </p>
+        <button id="iterateObjectBtn">List Properties</button>
+        <div class="output" id="iterateObjectOutput"></div>
+
     </main>
   </body>
 </html>

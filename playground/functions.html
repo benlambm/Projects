@@ -13,13 +13,34 @@
     <main>
       <h1>Functions</h1>
       <p>
-        Functions are reusable blocks of code. Give them input, and they give
-        you output. Try squaring a number below.
+        Functions are reusable blocks of code that perform a specific task. They can take inputs (arguments) and produce outputs (return values).
       </p>
 
+      <h2>Example 1: Squaring a Number (One Argument)</h2>
+      <p>
+        This example demonstrates a simple function that takes one argument (a number) and returns its square.
+        Enter a number below and click the button to see the function in action.
+      </p>
       <input id="numInput" type="number" placeholder="Enter a number" />
-      <button id="squareBtn">Square it ➗</button>
+      <button id="squareBtn">Square it</button>
       <div class="output" id="squareOutput"></div>
+
+      <h2>Example 2: Concatenating Strings (Multiple Arguments)</h2>
+      <p>
+        Functions can also take multiple arguments. This example shows a function that takes two strings and joins them together.
+        Enter two words below and click the button to concatenate them.
+      </p>
+      <div>
+        <label for="string1Input">String 1:</label>
+        <input type="text" id="string1Input" value="Hello">
+      </div>
+      <div>
+        <label for="string2Input">String 2:</label>
+        <input type="text" id="string2Input" value="World">
+      </div>
+      <button id="concatBtn">Concatenate Strings</button>
+      <div class="output" id="concatOutput"></div>
+
     </main>
   </body>
 </html>
