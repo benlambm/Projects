@@ -1,0 +1,141 @@
+/* Battleship Game Styles */
+:root {
+  --board-size: 400px;
+  --cell-size: calc(var(--board-size) / 10);
+  --water-color: #1e3a5f;
+  --hover-color: rgba(30, 144, 255, 0.5);
+  --hover-invalid: rgba(220, 20, 60, 0.5);
+  --ship-color: #4a6572;
+  --hit-color: #dc3545;
+  --miss-color: #f8f9fa;
+  --bg-color: #0d1b2a;
+  --text-color: #e0e1dd;
+  --accent-color: #ffa502;
+  --font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  font-family: var(--font-family);
+  min-height: 100vh;
+  padding: 20px;
+}
+
+h1 {
+  margin-bottom: 10px;
+  font-size: 2rem;
+  color: var(--accent-color);
+}
+
+.controls {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 15px;
+  align-items: center;
+}
+
+#message {
+  font-size: 1.1rem;
+}
+
+button {
+  padding: 8px 12px;
+  font-size: 1rem;
+  background-color: var(--accent-color);
+  color: var(--bg-color);
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+button:hover {
+  background-color: #e59402;
+}
+
+#game {
+  display: flex;
+  gap: 40px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+ 
+.board-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.board-container h2 {
+  text-align: center;
+  margin-bottom: 8px;
+  font-size: 1.2rem;
+}
+
+.board {
+  display: grid;
+  grid-template-columns: repeat(10, var(--cell-size));
+  grid-template-rows: repeat(10, var(--cell-size));
+  width: var(--board-size);
+  height: var(--board-size);
+  background-color: var(--water-color);
+  border: 2px solid var(--text-color);
+  position: relative;
+}
+
+.cell {
+  width: var(--cell-size);
+  height: var(--cell-size);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  cursor: pointer;
+}
+
+.cell.ship {
+  background-color: var(--ship-color);
+}
+
+.cell.hover {
+  background-color: var(--hover-color) !important;
+}
+
+.cell.hover-invalid {
+  background-color: var(--hover-invalid) !important;
+}
+
+.cell.hit {
+  background-color: var(--hit-color) !important;
+}
+
+.cell.miss {
+  background-color: var(--miss-color) !important;
+}
+
+.disabled {
+  pointer-events: none;
+  opacity: 0.6;
+}
+
+@media (max-width: 900px) {
+  .board {
+    transform: scale(0.8);
+  }
+}
+
+@media (max-width: 600px) {
+  #game {
+    flex-direction: column;
+  }
+  .board {
+    transform: scale(0.6);
+  }
+}
