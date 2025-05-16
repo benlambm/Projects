@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>HTML/CSS/JS Quiz</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <h1>Quiz on HTML, CSS, and JS</h1>
+    <div id="score"></div>
+    <form id="quiz">
+        <div class="quiz-container">
+            <div>
+                <p>1. What does HTML stand for?</p>
+                <label><input type="radio" name="q1" value="a"> Hyper Text Markup Language</label><br>
+                <label><input type="radio" name="q1" value="b"> High Text Markup Language</label><br>
+                <label><input type="radio" name="q1" value="c"> Hyper Tabular Markup Language</label><br>
+                <label><input type="radio" name="q1" value="d"> Hyperlinks Text Mark Language</label>
+            </div>
+            <div>
+                <p>2. Which CSS property controls text size?</p>
+                <label><input type="radio" name="q2" value="a"> font-style</label><br>
+                <label><input type="radio" name="q2" value="b"> text-size</label><br>
+                <label><input type="radio" name="q2" value="c"> font-size</label><br>
+                <label><input type="radio" name="q2" value="d"> text-style</label>
+            </div>
+            <div>
+                <p>3. Which symbol is used for comments in JavaScript?</p>
+                <label><input type="radio" name="q3" value="a"> &lt;!-- --&gt;</label><br>
+                <label><input type="radio" name="q3" value="b"> //</label><br>
+                <label><input type="radio" name="q3" value="c"> #</label><br>
+                <label><input type="radio" name="q3" value="d"> /* */</label>
+            </div>
+        </div>
+        <button type="button" onclick="gradeQuiz()">Submit</button>
+    </form>
+    <script src="script.js"></script>
+</body>
+
+</html>

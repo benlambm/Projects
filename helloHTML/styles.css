@@ -1,0 +1,68 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    background-color: #f9f9f9;
+}
+
+h1 {
+    color: #333;
+    text-align: center;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #ccc;
+}
+
+#score {
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-align: center;
+    font-size: 2em;
+}
+
+form {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+form div {
+    margin-bottom: 20px;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #fff;
+    position: relative;
+}
+
+button {
+    display: block;
+    width: 50%;
+    margin: 0 auto;
+    padding: 15px;
+    font-size: 1.2em;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+.correct {
+    color: green;
+}
+
+.correct::after {
+    content: " ✅";
+    font-size: 1.5em;
+}
+
+.incorrect {
+    color: red;
+}
+
+.incorrect::after {
+    content: " ❌";
+    font-size: 1.5em;
+}
