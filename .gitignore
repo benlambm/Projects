@@ -134,3 +134,23 @@ dist
 .yarn/build-state.yml
 .yarn/install-state.gz
 .pnp.*
+
+# macOS system files
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# macOS folder attributes
+__MACOSX/
+
+# VS Code settings
+.vscode/
+.history/
+
+# IDX workspace files
+.idx/
+*.idx
+
+# User-specific files
+*.swp
+*.swo
