@@ -1,3 +1,7 @@
+# learn-js
+
+An interactive playground for learning JavaScript fundamentals. Open `index.html` in your browser and try the examples.
+
 # JavaScript Playground
 
 A modern, interactive learning environment for JavaScript fundamentals using vanilla ES6+ JavaScript.

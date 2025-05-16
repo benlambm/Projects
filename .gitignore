@@ -154,3 +154,7 @@ __MACOSX/
 # User-specific files
 *.swp
 *.swo
+
+# Other system files
+Thumbs.db
+Desktop.ini
